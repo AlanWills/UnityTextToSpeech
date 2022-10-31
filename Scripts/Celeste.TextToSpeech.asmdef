@@ -1,0 +1,30 @@
+{
+    "name": "Celeste.TextToSpeech",
+    "rootNamespace": "Celeste.TextToSpeech",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Google.Cloud.TextToSpeech.V1.dll",
+        "Google.Api.CommonProtos_TTS.dll",
+        "Google.Api.Gax.Grpc_TTS.dll",
+        "Google.Api.Gax_TTS.dll",
+        "Google.Apis.Auth.PlatformServices_TTS.dll",
+        "Google.Apis.Auth_TTS.dll",
+        "Google.Apis.Core_TTS.dll",
+        "Google.Apis.PlatformServices_TTS.dll",
+        "Google.Apis_TTS.dll",
+        "Google.Protobuf_TTS.dll",
+        "Grpc.Auth_TTS.dll",
+        "Grpc.Core.Api_TTS.dll",
+        "Grpc.Core_TTS.dll",
+        "Newtonsoft.Json_TTS.dll",
+        "System.Interactive.Async_TTS.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
