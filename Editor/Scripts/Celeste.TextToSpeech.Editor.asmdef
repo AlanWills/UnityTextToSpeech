@@ -1,8 +1,10 @@
 {
-    "name": "Celeste.TextToSpeech",
-    "rootNamespace": "Celeste.TextToSpeech",
+    "name": "Celeste.TextToSpeech.Editor",
+    "rootNamespace": "CelesteEditor.TextToSpeech",
     "references": [],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
