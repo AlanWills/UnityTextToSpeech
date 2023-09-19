@@ -37,7 +37,7 @@ namespace CelesteEditor.Tools
 
         public string PathRelativeToProjectFolder(string outputName)
         {
-            return Path.Combine(outputFolder, languageCode, $"{outputName}.mp3");
+            return "{outputFolder}/{languageCode}/{outputName}.mp3";
         }
     }
 
@@ -101,7 +101,7 @@ namespace CelesteEditor.Tools
             {
                 string fullOutputPath = parameters.PathRelativeToProjectFolder(audioSpeech.outputName);
                 AudioClip audioClip = AssetDatabase.LoadAssetAtPath<AudioClip>(fullOutputPath);
-                Debug.Assert(audioClip != null, $"Could not find audio clip for speech {audioSpeech.outputName}.");
+                Debug.Assert(audioClip != null, $"Could not find audio clip for speech {audioSpeech.outputName} at path {fullOutputPath}.");
 
                 if (audioClip != null)
                 {
