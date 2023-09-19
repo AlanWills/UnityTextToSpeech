@@ -27,10 +27,17 @@ namespace CelesteEditor.Tools
         public string outputFolder;
 
         #endregion
+		
+		public void SetDefaultValues()
+		{
+			gcpCredentialsPath = Path.Combine(Application.streamingAssetsPath, "gcp_credentials.json");
+			text = new List<AudioSpeech>();
+			outputFolder = "Assets/Localisation/Audio";
+		}
 
         public string PathRelativeToProjectFolder(string outputName)
         {
-            return Path.Combine("Assets", outputFolder, languageCode, $"{outputName}.mp3");
+            return Path.Combine(outputFolder, languageCode, $"{outputName}.mp3");
         }
     }
 
