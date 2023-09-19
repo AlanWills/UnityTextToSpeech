@@ -1,4 +1,4 @@
-﻿namespace FlashcardsEditor.Tools
+﻿namespace CelesteEditor.Tools
 {
     public static class GenerateAudioSpeechConstants
     {

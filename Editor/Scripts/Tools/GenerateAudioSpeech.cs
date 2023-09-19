@@ -5,7 +5,7 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-namespace FlashcardsEditor.Tools
+namespace CelesteEditor.Tools
 {
     [Serializable]
     public struct AudioSpeech
