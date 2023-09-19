@@ -19,7 +19,7 @@ namespace CelesteEditor.Tools
     {
         #region Properties and Fields
 
-        public string FullPathToLanguageFolder => Path.Combine(Application.dataPath, outputFolder, languageCode);
+        public string FullPathToLanguageFolder => $"{Application.dataPath}/{outputFolder}/{languageCode}";
 
         public string gcpCredentialsPath;
         [HideInInspector] public string languageCode;
