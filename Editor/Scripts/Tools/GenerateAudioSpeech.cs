@@ -37,7 +37,7 @@ namespace CelesteEditor.Tools
 
         public string PathRelativeToProjectFolder(string outputName)
         {
-            return "{outputFolder}/{languageCode}/{outputName}.mp3";
+            return "{outputFolder}/{languageCode}/{outputName}";
         }
     }
 
@@ -83,7 +83,7 @@ namespace CelesteEditor.Tools
                     AudioEncoding = AudioEncoding.Mp3
                 };
 
-                string fullOutputPath = Path.Combine(outputDirectory, $"{audioSpeech.outputName}.mp3");
+                string fullOutputPath = Path.Combine(outputDirectory, audioSpeech.outputName);
                 DirectoryInfo fullOutputDirectory = Directory.GetParent(fullOutputPath);
 
                 if (!fullOutputDirectory.Exists)
