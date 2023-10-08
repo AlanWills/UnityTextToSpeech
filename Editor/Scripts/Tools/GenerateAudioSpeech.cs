@@ -37,7 +37,7 @@ namespace CelesteEditor.Tools
 
         public string PathRelativeToProjectFolder(string outputName)
         {
-            return "{outputFolder}/{languageCode}/{outputName}";
+            return $"{outputFolder}/{languageCode}/{outputName}";
         }
     }
 
