@@ -83,16 +83,23 @@ namespace CelesteEditor.Tools
                     AudioEncoding = AudioEncoding.Mp3
                 };
 
-                string fullOutputPath = Path.Combine(outputDirectory, audioSpeech.outputName);
-                DirectoryInfo fullOutputDirectory = Directory.GetParent(fullOutputPath);
+				try
+				{
+					string fullOutputPath = Path.Combine(outputDirectory, audioSpeech.outputName);
+					DirectoryInfo fullOutputDirectory = Directory.GetParent(fullOutputPath);
 
-                if (!fullOutputDirectory.Exists)
-                {
-                    fullOutputDirectory.Create();
-                }
+					if (!fullOutputDirectory.Exists)
+					{
+						fullOutputDirectory.Create();
+					}
 
-                SynthesizeSpeechResponse response = textToSpeechClient.SynthesizeSpeech(input, voice, audioConfig);
-                File.WriteAllBytes(fullOutputPath, response.AudioContent.ToByteArray());
+					SynthesizeSpeechResponse response = textToSpeechClient.SynthesizeSpeech(input, voice, audioConfig);
+					File.WriteAllBytes(fullOutputPath, response.AudioContent.ToByteArray());
+				}
+				catch
+				{
+					Debug.LogError($"Serious error whilst trying to generate audio file for {audioSpeech.outputName}.");
+				}
             }
 
             AssetDatabase.Refresh();
