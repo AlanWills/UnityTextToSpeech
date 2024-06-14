@@ -23,6 +23,7 @@ namespace CelesteEditor.Tools
 
         public string gcpCredentialsPath;
         [HideInInspector] public string languageCode;
+		public string voiceName;
         [HideInInspector] public List<AudioSpeech> text;
         public string outputFolder;
 
@@ -75,7 +76,8 @@ namespace CelesteEditor.Tools
                 VoiceSelectionParams voice = new VoiceSelectionParams()
                 {
                     LanguageCode = parameters.languageCode,
-                    SsmlGender = SsmlVoiceGender.Neutral
+                    SsmlGender = SsmlVoiceGender.Neutral,
+					Name = parameters.voiceName
                 };
 
                 AudioConfig audioConfig = new AudioConfig()
